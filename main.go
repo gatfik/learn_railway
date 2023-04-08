@@ -12,7 +12,7 @@ import (
 func main() {
 	database.StartDB()
 	r := router.StartServer()
-	r.Run(os.Getenv("PORT"))
+	r.Run(":" + os.Getenv("PORT"))
 }
 
 func ServeSample() {
