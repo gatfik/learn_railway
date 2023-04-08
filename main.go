@@ -14,7 +14,7 @@ func main() {
 	database.StartDB()
 	godotenv.Load()
 	r := router.StartServer()
-	r.Run(os.Getenv("SERVICE_PORT"))
+	r.Run(os.Getenv("PORT"))
 }
 
 func ServeSample() {
