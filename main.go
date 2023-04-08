@@ -4,7 +4,6 @@ import (
 	"dts/learn_middleware/database"
 	"dts/learn_middleware/router"
 	"fmt"
-	"github.com/joho/godotenv"
 	"log"
 	"net/http"
 	"os"
@@ -12,7 +11,6 @@ import (
 
 func main() {
 	database.StartDB()
-	godotenv.Load()
 	r := router.StartServer()
 	r.Run(os.Getenv("PORT"))
 }
