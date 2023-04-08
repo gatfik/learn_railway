@@ -23,6 +23,7 @@ var (
 func StartDB() {
 
 	dsn := fmt.Sprintf("mysql://%s:%s@%s:%s/%s", user, password, host, dbPort, dbname)
+	fmt.Println("dsn : ", dsn)
 	//dsn := "root:Secret123@tcp(127.0.0.1:3306)/testdb?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
