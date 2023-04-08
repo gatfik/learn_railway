@@ -6,12 +6,13 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 )
 
 func main() {
 	database.StartDB()
 	r := router.StartServer()
-	r.Run(":8080")
+	r.Run(os.Getenv("SERVICE_PORT"))
 }
 
 func ServeSample() {
